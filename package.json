@@ -22,10 +22,5 @@
     "k6"
   ],
   "author": "k6 team",
-  "license": "MIT",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "faker": "^5.5.3",
-    "xml2js": "^0.4.19"
-  }
+  "license": "MIT"
 }
