@@ -1,13 +1,15 @@
 var webpack = require('webpack');
 var path = require('path');
 
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
   output: {
+    filename: 'k6chaijs.min.js',
     path: path.resolve(__dirname, 'build'),
     libraryTarget: 'commonjs',
-    filename: 'k6-chaijs.min.js',
   },
   module: {
     rules: [
@@ -23,4 +25,15 @@ module.exports = {
   target: 'web',
   externals: /^(k6|https?\:\/\/)(\/.*)?/,
   devtool: 'source-map',
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          output: {
+            comments: false
+          }
+        }
+      })
+    ]
+  }  
 };
