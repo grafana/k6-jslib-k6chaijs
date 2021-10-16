@@ -12,7 +12,7 @@ Download from: https://jslib.k6.io/
 
 ```js
 import http from 'k6/http';
-import { describe, expect } from '../build/k6chaijs.min.js';
+import { describe, expect } from 'https://jslib.k6.io/k6chaijs/4.3.4.0/index.js';
 
 export let options = {
   thresholds: {
