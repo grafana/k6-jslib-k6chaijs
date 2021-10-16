@@ -1,4 +1,4 @@
-import { describe, expect, chai } from '../build/k6-chaijs.min.js';
+import { describe, expect, chai } from '../build/k6chaijs.min.js';
 import { Httpx, Get } from 'https://jslib.k6.io/httpx/0.0.4/index.js';
 import { randomString } from 'https://jslib.k6.io/k6-utils/1.0.0/index.js';
 

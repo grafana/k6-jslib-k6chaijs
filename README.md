@@ -1,16 +1,18 @@
-# k6-jslib-chaijs
+# k6Chaijs - ChaiJS Assertion Library for k6.io
 
 This is a [chaijs](https://www.chaijs.com/) library with a few modifications to make it runnable in k6.
 
-Docs: http://k6.io/docs/javascript-api/jslib/chaijs
+Installation docs: https://www.chaijs.com/api/bdd/
+
+API docs: http://k6.io/docs/javascript-api/jslib/chaijs
 
 Download from: https://jslib.k6.io/
 
-Example
+## Example
 
 ```js
 import http from 'k6/http';
-import { describe, expect } from '../build/k6-chaijs.min.js';
+import { describe, expect } from '../build/k6chaijs.min.js';
 
 export let options = {
   thresholds: {
@@ -41,3 +43,17 @@ export default function testSuite() {
 
 ![CLI screenshot](./CLI-screenshot.png)
 
+
+## Development 
+
+
+#### Build
+```
+npm install
+npm run-script webpack
+```
+
+#### Deploy new version
+1. Build.
+2. Use the `./build/k6chaijs.min.js` to make a PR to [jslib.k6.io](https://github.com/grafana/jslib.k6.io). 
+3. Release version should follow the chaijs version. Currently `4.3.4.0`.
