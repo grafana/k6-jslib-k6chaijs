@@ -1,14 +1,3 @@
-# k6-jslib-chaijs
-
-This is a [chaijs](https://www.chaijs.com/) library with a few modifications to make it runnable in k6.
-
-Docs: http://k6.io/docs/javascript-api/jslib/chaijs
-
-Download from: https://jslib.k6.io/
-
-Example
-
-```js
 import { describe, expect, chai } from '../build/k6-chaijs.min.js';
 import { Httpx, Get } from 'https://jslib.k6.io/httpx/0.0.4/index.js';
 import { randomString } from 'https://jslib.k6.io/k6-utils/1.0.0/index.js';
@@ -33,8 +22,3 @@ export default function testSuite() {
     expect(response.json().length, "Number of crocs").to.be.above(4)
   })
 }
-
-```
-
-![CLI screenshot](./CLI-screenshot.png)
-

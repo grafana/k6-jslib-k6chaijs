@@ -3,11 +3,11 @@ var path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './main.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     libraryTarget: 'commonjs',
-    filename: 'app.bundle.js',
+    filename: 'k6-chaijs.min.js',
   },
   module: {
     rules: [
