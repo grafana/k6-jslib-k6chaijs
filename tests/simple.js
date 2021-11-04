@@ -1,5 +1,5 @@
 import http from 'k6/http';
-import { describe, expect } from 'https://jslib.k6.io/k6chaijs/4.3.4.0/index.js';
+import { describe, expect, chai } from '../build/k6chaijs.min.js';
 
 export let options = {
   thresholds: {
@@ -7,6 +7,8 @@ export let options = {
     http_req_failed: [{ threshold: 'rate == 0.00', abortOnFail: true }],
   },
 };
+
+chai.config.aggregateChecks = false;
 
 export default function testSuite() {
 
