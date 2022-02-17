@@ -137,7 +137,7 @@ util.addMethod(Assertion.prototype, 'validJsonBody', function () {
 
   let checkIsSuccessful = true;
   try {
-    response.json();
+    response.json("__unlikelyidefintifier1");
   }
   catch (e) {
     checkIsSuccessful = false;
