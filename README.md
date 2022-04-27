@@ -4,7 +4,7 @@ This is a [chaijs](https://www.chaijs.com/) library with a few modifications to 
 
 Installation docs: https://www.chaijs.com/api/bdd/
 
-API docs: http://k6.io/docs/javascript-api/jslib/chaijs
+API docs: https://k6.io/docs/javascript-api/jslib/k6chaijs/
 
 Download from: https://jslib.k6.io/
 
