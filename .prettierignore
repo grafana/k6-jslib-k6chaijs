@@ -1,0 +1,3 @@
+tests/all-examples-from-docs.js
+build/
+*.md

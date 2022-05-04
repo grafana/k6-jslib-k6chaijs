@@ -7,20 +7,29 @@
     "@babel/core": "^7.4.4",
     "@babel/plugin-transform-block-scoping": "^7.14.1",
     "@babel/preset-env": "^7.4.4",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "babel-loader": "^8.0.6",
     "chai": "4.3.4",
+    "prettier": "^2.6.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2"
   },
   "engines": {},
   "scripts": {
     "webpack": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --ignore-unknown --write 'src/**/*.js'",
+    "prettier:check": "prettier --check 'src/**/*.js' || exit 0"
   },
   "keywords": [
     "k6"
   ],
   "author": "k6 team",
-  "license": "MIT"
+  "license": "MIT",
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 80
+  }
 }
