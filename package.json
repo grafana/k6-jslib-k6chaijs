@@ -5,10 +5,13 @@
   "main": "src/index.js",
   "devDependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-transform-block-scoping": "^7.14.1",
     "@babel/preset-env": "^7.4.4",
     "babel-loader": "^8.0.6",
     "chai": "4.3.4",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.6.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.31.0",
@@ -19,7 +22,8 @@
     "webpack": "webpack",
     "test": "npm run webpack && k6 run ./tests/test.js",
     "prettier": "prettier --ignore-unknown --write 'src/**/*.js'",
-    "prettier:check": "prettier --check 'src/**/*.js' || exit 0"
+    "prettier:check": "prettier --check 'src/**/*.js' || exit 0",
+    "eslint": "eslint ."
   },
   "keywords": [
     "k6"
@@ -31,5 +35,27 @@
     "semi": false,
     "singleQuote": true,
     "printWidth": 80
-  }
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaVersion": 2019,
+      "sourceType": "module"
+    },
+    "ignorePatterns": [
+      "node_modules/",
+      "build/",
+      "tests/all-examples-from-docs.js"
+    ]
+  },
+  "dependencies": {}
 }
