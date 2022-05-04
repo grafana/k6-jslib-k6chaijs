@@ -17,7 +17,7 @@
   "engines": {},
   "scripts": {
     "webpack": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run webpack && k6 run ./tests/test.js",
     "prettier": "prettier --ignore-unknown --write 'src/**/*.js'",
     "prettier:check": "prettier --check 'src/**/*.js' || exit 0"
   },
