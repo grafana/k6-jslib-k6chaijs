@@ -1,4 +1,9 @@
 declare namespace Chai {
+  export interface Assertion extends Assertion {
+    anonymize: (msg: string) => string;
+    validJsonBody: Assertion;
+  }
+
   export interface AssertStatic {
     (
       expression: unknown,

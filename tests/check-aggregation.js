@@ -1,4 +1,4 @@
-import chai, { describe, expect } from '../build/k6chaijs.min.js';
+import chai, { describe, expect } from '../dist/index.js';
 import { sleep } from 'k6';
 
 // set aggregateChecks=false to see how checks are behaving with multiple values interpolated into
