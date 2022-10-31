@@ -156,12 +156,13 @@ export function assert(): Assert {
       if (chai.config.logFailures) {
         console.warn(truncatedExpectation);
       }
-
-      throw new chai.AssertionError(
-        truncatedExpectation,
-        error,
-        chai.config.includeStack ? chai.assert : chai.util.flag(context, 'ssfi')
-      );
+      if (chai.config.throwAssertionError) {
+        throw new chai.AssertionError(
+          truncatedExpectation,
+          error,
+          chai.config.includeStack ? chai.assert : chai.util.flag(context, 'ssfi')
+        );
+      }
     }
   };
 }
