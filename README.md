@@ -44,16 +44,16 @@ export default function testSuite() {
 ![CLI screenshot](./CLI-screenshot.png)
 
 
-## Development 
+## Development
 
 
 #### Build
 ```
 npm install
-npm run-script webpack
+npm run-script build
 ```
 
 #### Deploy new version
 1. Build.
-2. Use the `./build/k6chaijs.min.js` to make a PR to [jslib.k6.io](https://github.com/grafana/jslib.k6.io). 
+2. Use the `./build/k6chaijs.min.js` to make a PR to [jslib.k6.io](https://github.com/grafana/jslib.k6.io).
 3. Release version should follow the chaijs version. Currently `4.3.4.0`.
