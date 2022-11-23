@@ -135,11 +135,6 @@ export function assert(): Assert {
       {
         [testName]: () => ok
       },
-      {
-        this: truncateByVariableThreshold(getObjectDisplay(object)),
-        actual: truncateByVariableThreshold(getObjectDisplay(actual)),
-        expected: truncateByVariableThreshold(getObjectDisplay(expected))
-      }
     );
 
     if (!ok) {
