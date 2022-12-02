@@ -11,6 +11,7 @@ declare namespace Chai {
   }
 
   export interface Config {
+    throwAssertionError: boolean;
     truncateVariableThreshold: number;
     truncateMsgThreshold: number;
     aggregateChecks: boolean;
