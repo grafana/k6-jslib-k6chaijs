@@ -1,19 +1,30 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["esnext"],
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "target": "es2015",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "module": "commonjs",
+    "allowJs": true,
+    "removeComments": false,
+
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": false,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "skipLibCheck": true,
+
+    "emitDeclarationOnly": true,
+    "declaration": true, 
     "isolatedModules": true,
-    "noEmit": true,
-    "noImplicitThis": false
+		"esModuleInterop": true,
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]

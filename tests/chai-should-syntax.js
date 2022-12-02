@@ -1,4 +1,4 @@
-import chai, { describe } from '../build/k6chaijs.min.js';
+import chai, { describe } from '../dist/index.js';
 
 chai.config.aggregateChecks = false;
 chai.config.logFailures = true;

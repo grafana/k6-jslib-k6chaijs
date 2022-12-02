@@ -1,11 +1,14 @@
 {
   "name": "k6chaijs",
   "version": "1.0.0",
-  "description": "Create a chaijs k6 build",
-  "main": "src/index.js",
-  "engines": {},
+  "description": "chaijs for k6",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
-    "build": "esbuild ./src/index.ts --minify --bundle --log-level=info --external:k6 --format=cjs --legal-comments=none --outfile=build/k6chaijs.min.js"
+    "build": "./build.js"
   },
   "keywords": [
     "k6"
@@ -22,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "esbuild": "^0.14.51",
+    "esbuild-plugin-d.ts": "^1.1.0",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",

@@ -1,5 +1,5 @@
 import http from 'k6/http';
-import chai, { describe, expect } from '../build/k6chaijs.min.js';
+import chai, { describe, expect } from '../dist/index.js';
 
 export let options = {
   thresholds: {
