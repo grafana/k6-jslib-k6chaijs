@@ -120,7 +120,6 @@ export function assert(): Assert {
     ];
 
     const ok = chai.util.test(context, params);
-    const object = chai.util.flag(context, 'object');
     const actual = chai.util.getActual(context, params);
 
     const template = createExpectationTemplate(context, params);
@@ -130,17 +129,9 @@ export function assert(): Assert {
       ? createTestName(context, template)
       : testExpectation;
 
-    check(
-      null,
-      {
-        [testName]: () => ok
-      },
-      {
-        this: truncateByVariableThreshold(getObjectDisplay(object)),
-        actual: truncateByVariableThreshold(getObjectDisplay(actual)),
-        expected: truncateByVariableThreshold(getObjectDisplay(expected))
-      }
-    );
+    check(null, {
+      [testName]: () => ok
+    });
 
     if (!ok) {
       const truncatedExpectation = truncateByVariableThreshold(testExpectation);
