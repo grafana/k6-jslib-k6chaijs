@@ -1,4 +1,5 @@
 import { check } from 'k6';
+import exec from 'k6/execution';
 import { Assert, AssertionArgs } from './types';
 import chai from './config';
 import { isFunction, regexTag, truncate } from './utils';
@@ -146,6 +147,10 @@ export function assert(): Assert {
 
       if (chai.config.logFailures) {
         console.warn(truncatedExpectation);
+      }
+
+      if (chai.config.exitOnError) {
+        exec.test.abort(truncatedExpectation);
       }
 
       throw new chai.AssertionError(
