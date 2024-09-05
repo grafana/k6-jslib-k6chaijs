@@ -15,6 +15,7 @@ declare namespace Chai {
     truncateMsgThreshold: number;
     aggregateChecks: boolean;
     logFailures: boolean;
+    exitOnError: boolean;
   }
 
   export interface ChaiUtils {
