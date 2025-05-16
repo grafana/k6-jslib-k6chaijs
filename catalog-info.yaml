@@ -6,7 +6,6 @@ metadata:
   description: |
     Chai Assertion Library for k6.io
   annotations:
-    backstage.io/techdocs-ref: dir:.
     github.com/project-slug: grafana/k6-jslib-k6chaijs
 spec:
   type: library
