@@ -1,6 +1,7 @@
 {
   "name": "k6chaijs",
   "version": "1.0.0",
+  "packageManager": "npm@10.9.2",
   "description": "Create a chaijs k6 build",
   "main": "src/index.js",
   "engines": {},
