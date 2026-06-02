@@ -6,7 +6,8 @@
   "main": "src/index.js",
   "engines": {},
   "scripts": {
-    "build": "esbuild ./src/index.ts --minify --bundle --log-level=info --external:k6 --format=cjs --legal-comments=none --outfile=build/k6chaijs.min.js"
+    "build": "esbuild ./src/index.ts --minify --bundle --log-level=info --external:k6 --format=cjs --legal-comments=none --outfile=build/k6chaijs.min.js",
+    "export": "tsup ./src/index.ts && mv export/index.d.ts export/temp.d.ts && dts-bundle-generator export/temp.d.ts --out-file export/index.d.ts --external-inlines chai --no-check && rm -f export/temp.d.ts"
   },
   "keywords": [
     "k6"
@@ -22,11 +23,25 @@
     "@types/node": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
+    "dts-bundle-generator": "^9.5.1",
     "esbuild": "^0.14.51",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
+    "tsup": "^8.3.5",
     "typescript": "^4.7.4"
+  },
+  "tsup": {
+    "dts": true,
+    "format": "cjs",
+    "outDir": "export",
+    "clean": true,
+    "noExternal": [
+      "chai"
+    ],
+    "external": [
+      "k6"
+    ]
   }
 }
