@@ -16,6 +16,27 @@
   "dependencies": {
     "chai": "^4.5.0"
   },
+  "comments": {
+    "overrides": "Pin patched versions of transitive (dev-only) dependencies to remediate active HIGH/CRITICAL CVEs. Every pin stays inside the major version range its parent already requires, so eslint 8.x keeps resolving normally. Remove an entry once the parent dependency ships a patched version on its own.",
+    "overrides-cves": {
+      "flatted": "CVE-2026-33228 (CRITICAL, prototype pollution in parse()), CVE-2026-32141 (HIGH, unbounded recursion DoS) - via flat-cache -> eslint",
+      "minimatch@3": "CVE-2026-26996, CVE-2026-27903, CVE-2026-27904 (HIGH, ReDoS) - via eslint / @eslint/eslintrc / @humanwhocodes/config-array / glob",
+      "brace-expansion@1": "CVE-2026-13149, CVE-2026-14257 (HIGH, DoS) - via minimatch 3.x",
+      "brace-expansion@5": "CVE-2026-14257 (HIGH, OOM DoS) - via @typescript-eslint/typescript-estree -> minimatch 10.x",
+      "cross-spawn": "CVE-2024-21538 (HIGH, ReDoS) - via eslint",
+      "js-yaml": "CVE-2026-59869 (HIGH, quadratic CPU via merge-key chains) - via eslint / @eslint/eslintrc",
+      "ajv": "CVE-2025-69873 (HIGH, ReDoS with $data option) - via eslint / @eslint/eslintrc"
+    }
+  },
+  "overrides": {
+    "flatted": "^3.4.2",
+    "minimatch@3": "^3.1.5",
+    "brace-expansion@1": "^1.1.18",
+    "brace-expansion@5": "^5.0.9",
+    "cross-spawn": "^7.0.6",
+    "js-yaml": "^4.3.0",
+    "ajv": "^6.15.0"
+  },
   "devDependencies": {
     "@types/chai": "5.2.3",
     "@types/k6": "2.0.1",
