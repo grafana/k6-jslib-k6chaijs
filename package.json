@@ -14,7 +14,7 @@
   "author": "k6 team",
   "license": "MIT",
   "dependencies": {
-    "chai": "^4.5.0"
+    "chai": "^6.0.0"
   },
   "comments": {
     "overrides": "Pin patched versions of transitive (dev-only) dependencies to remediate active HIGH/CRITICAL CVEs. Every pin stays inside the major version range its parent already requires, so eslint 8.x keeps resolving normally. Remove an entry once the parent dependency ships a patched version on its own.",
