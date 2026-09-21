@@ -24,7 +24,7 @@
       "brace-expansion@1": "CVE-2026-13149, CVE-2026-14257 (HIGH, DoS) - via minimatch 3.x",
       "brace-expansion@5": "CVE-2026-14257 (HIGH, OOM DoS) - via @typescript-eslint/typescript-estree -> minimatch 10.x",
       "cross-spawn": "CVE-2024-21538 (HIGH, ReDoS) - via eslint",
-      "js-yaml": "CVE-2026-59869 (HIGH, quadratic CPU via merge-key chains) - via eslint / @eslint/eslintrc",
+      "js-yaml": "CVE-2026-59869, CVE-2026-84375, GHSA-5p4m-2wfm-xmqj (HIGH, CPU DoS) - via eslint / @eslint/eslintrc",
       "ajv": "CVE-2025-69873 (HIGH, ReDoS with $data option) - via eslint / @eslint/eslintrc"
     }
   },
@@ -34,7 +34,7 @@
     "brace-expansion@1": "^1.1.18",
     "brace-expansion@5": "^5.0.9",
     "cross-spawn": "^7.0.6",
-    "js-yaml": "^4.3.0",
+    "js-yaml": "^4.3.2",
     "ajv": "^6.15.0"
   },
   "devDependencies": {
